@@ -1,0 +1,35 @@
+Spotify Documentation Basics for Android
+
+All information can be found at: https://developer.spotify.com/documentation/android/
+
+Spotify Android SDK:
+    Contains two libraries
+        Spotify Authentication Library: Provides the way to have the access to play music or to be used to call the Spotify API.
+        Spotify App Remote Library: The classes necessary for playback control and metadata access.
+    References for the Libraries
+        Authentication: https://spotify.github.io/android-sdk/auth-lib/docs/
+        App Remote: https://spotify.github.io/android-sdk/app-remote-lib/docs/
+    To download the libraries:
+        https://github.com/spotify/android-sdk/releases
+
+Quick Start Guide:
+    https://developer.spotify.com/documentation/android/quick-start/
+
+To get Spotify to Work:
+    Spotify needs to be installed on the Android emulator.
+    Need a unique client id
+    Need a development fingerprint
+    Need a callback url which
+    Need to login into the Spotify Developer Dashboard
+        Where you get your unique client id
+        Add the callback url in the settings
+        Add the development fingerprint in the settings
+
+Spotify Dependencies:
+    The authentication library and the app remote need to be added to the dependencies in the build.gradle module in order to use them.
+
+Additional guides from Spotify:
+    https://developer.spotify.com/documentation/android/guides/
+    includes authentication, media notifications, remote calls, and application lifecycle
+
+Overall would like to have Spotify as another option among system sounds/ringtones and local audio files to use for the alarms.

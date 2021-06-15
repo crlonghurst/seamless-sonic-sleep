@@ -1,0 +1,94 @@
+<resources>
+
+    <!-- App-wide strings -->
+    <string name="app_name">Sleam</string>
+    <string name="F">F</string>
+    <string name="M">M</string>
+    <string name="S">S</string>
+    <string name="T">T</string>
+    <string name="W">W</string>
+    <string name="btn_continue">Continue</string>
+    <string name="system">SYSTEM</string>
+    <string name="spotify">SPOTIFY</string>
+    <string name="local_files">LOCAL FILES</string>
+    <string name="settings">Settings</string>
+    <string name="library">Library</string>
+    <string name="title_activity_schedules">Activity</string>
+
+    <!-- Sleam welcome screen (sleam_welcome.xml) -->
+    <string name="welcome">Welcome</string>
+    <string name="welcome_message">Sleam is designed to enhance your sleep experience
+        by creating a seamless sonic environment.
+        \n\nWe\'ll walk you through a few questions to get started.
+        \n\nTap the button below to begin.</string>
+    <string name="btn_begin">Begin</string>
+    <string name="btn_skip">Skip</string>
+
+    <!-- Schedule questions screen (schedule_questions.xml) -->
+    <string name="schedule_questions">Schedule</string>
+    <string name="schedule_question_one">What would you like to call your sleep schedule?</string>
+    <string name="schedule_question_two">What time do you go to bed?</string>
+    <string name="schedule_question_three">What time would you like to wake up?</string>
+    <string name="schedule_question_four">On which days?</string>
+    <string name="time">time</string>
+    <string name="name">name</string>
+
+    <!-- Falling and staying asleep question screen (falling_asleep_questions.xml) -->
+    <string name="falling_asleep_questions">Falling and staying asleep</string>
+    <string name="falling_asleep_question_one">How do you want to fall asleep?</string>
+    <string name="falling_asleep_question_two">How do you want to stay asleep?</string>
+
+    <!-- Waking up screen (waking_up_questions.xml) -->
+    <string name="waking_up_questions">Waking up</string>
+    <string name="waking_up_question_one">What sounds would you like to wake up to?</string>
+    <string name="add_spotify">+ Spotify</string>
+    <string name="add_my_music_files">+ My Music Files</string>
+    <string name="add_system_alarms">+ System Alarms</string>
+
+    <!-- Schedules screen (schedules.xml) -->
+    <string name="create">+ CREATE</string>
+    <string name="Schedules">Schedules</string>
+
+    <!-- Schedules screen (Experimental) (activity_schedules.xml) -->
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Edit schedule screen (edit_schedule.xml) -->
+    <string name="edit_schedule">Edit Schedule</string>
+    <string name="schedule_name">Schedule Name</string>
+    <string name="days_active">Days Active</string>
+    <string name="fall_asleep">Fall Asleep</string>
+    <string name="begin_playing_music">Begin playing sounds at</string>
+    <string name="stay_asleep">Stay Asleep</string>
+    <string name="play_sounds">Change sounds at</string>
+    <string name="add_music_button">Select Sound</string>
+    <string name="wake_up">Wake Up</string>
+    <string name="wake_up_subtext">Wake up at</string>
+
+    <!-- Add music screen (add_music.xml) -->
+    <string name="add_music">Add Music</string>
+    <string name="songs">Songs</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Artists</string>
+    <string name="playlists">Playlists</string>
+    <string name="folders">Folders</string>
+    <string name="overflow_menu">Overflow menu</string>
+
+    <!-- Add music - local files screen (add_music_local_files.xml) -->
+    <string name="back_arrow_image">Back arrow image</string>
+    <string name="songs_image">Songs image</string>
+    <string name="albums_image">Albums image</string>
+    <string name="artists_image">Artists image</string>
+    <string name="playlists_image">Playlists image</string>
+    <string name="folders_image">Folders image</string>
+    <string name="add_music_hint">Select one or more songs, albums, etc.</string>
+
+    <!-- Alarm screen (alarm.xml) -->
+    <string name="snooze">Snooze</string>
+    <string name="dismiss">Dismiss</string>
+
+    <!-- Settings screen (settings.xml) -->
+    <string name="setting_placeholder">Setting Placeholder</string>
+
+</resources>

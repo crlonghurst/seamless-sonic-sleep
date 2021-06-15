@@ -1,0 +1,138 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.byui.cit.sleamapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml
+10    <!--
+11    Author Christian Longhurst
+12    Last Updated: 29 October 2020
+13        App asks permission for Bluetooth usage, Setting the Alarm, using the internet (for spotify),
+14        Reading and writing to the calendar for setting alarms,
+15        Recording the Audio for music,
+16        Getting permission to run in the background,
+17        Getting permission to vibrate if wanted,
+18        Wake lock for an alarm
+19        Using data while in the background.
+20    -->
+21    <uses-permission android:name="android.permission.BLUETOOTH" />
+21-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:16:5-68
+21-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:16:22-65
+22    <uses-permission android:name="android.permission.SET_ALARM" />
+22-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:17:5-68
+22-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:17:22-65
+23    <uses-permission android:name="android.permission.INTERNET" />
+23-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:18:5-67
+23-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:18:22-64
+24    <uses-permission android:name="android.permission.READ_CALENDAR" />
+24-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:19:5-72
+24-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:19:22-69
+25    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+25-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:20:5-71
+25-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:20:22-68
+26    <uses-permission android:name="android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND" />
+26-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:21:5-94
+26-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:21:22-91
+27    <uses-permission android:name="android.permission.VIBRATE" />
+27-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:22:5-66
+27-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:22:22-63
+28    <uses-permission android:name="android.permission.WAKE_LOCK" />
+28-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:23:5-68
+28-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:23:22-65
+29    <uses-permission android:name="android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND" />
+29-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:24:5-99
+29-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:24:22-96
+30    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+30-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:25:5-73
+30-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:25:22-70
+31    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+31-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:26:5-28:47
+31-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:27:9-63
+32    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+32-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:29:5-81
+32-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:29:22-78
+33    <!--
+34 Author Tyler Israelsen
+35    Permissions for accessing storage
+36    -->
+37    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+37-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:34:5-81
+37-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:34:22-78
+38    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+38-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:35:5-80
+38-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:35:22-77
+39
+40    <application
+40-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:37:5-65:19
+41        android:allowBackup="true"
+41-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:38:9-35
+42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+42-->[androidx.core:core:1.3.1] C:\Users\Longhurst\.gradle\caches\transforms-2\files-2.1\c560b8721f05ca12656603dd382025ab\core-1.3.1\AndroidManifest.xml:24:18-86
+43        android:debuggable="true"
+44        android:icon="@mipmap/ic_launcher"
+44-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:39:9-43
+45        android:label="@string/app_name"
+45-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:40:9-41
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:41:9-54
+47        android:supportsRtl="true"
+47-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:42:9-35
+48        android:testOnly="true"
+49        android:theme="@style/Theme.SleamApp" >
+49-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:43:9-46
+50        <activity
+50-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:44:9-47:74
+51            android:name="edu.byui.cit.sleamapp.controller.SchedulesActivity"
+51-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:45:13-57
+52            android:label="@string/title_activity_schedules"
+52-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:46:13-61
+53            android:theme="@style/Theme.SleamApp.NoActionBar" />
+53-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:47:13-62
+54        <activity android:name="edu.byui.cit.sleamapp.controller.MainActivity" >
+54-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:48:9-54:20
+54-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:48:19-58
+55            <intent-filter>
+55-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:49:13-53:29
+56                <action android:name="android.intent.action.MAIN" />
+56-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:50:17-69
+56-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:50:25-66
+57
+58                <category android:name="android.intent.category.LAUNCHER" />
+58-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:52:17-77
+58-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:52:27-74
+59            </intent-filter>
+60        </activity>
+61
+62        <receiver
+62-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:56:9-62:20
+63            android:name="edu.byui.cit.sleamapp.system.alarm.AlarmReceiver"
+63-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:57:13-55
+64            android:enabled="true" >
+64-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:58:13-35
+65            <intent-filter>
+65-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:59:13-61:29
+66                <action android:name="android.intent.action.BOOT_COMPLETED" />
+66-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:60:17-79
+66-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:60:25-76
+67            </intent-filter>
+68        </receiver>
+69
+70        <service android:name="edu.byui.cit.sleamapp.system.alarm.AlarmService" />
+70-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:64:9-62
+70-->C:\cit360\apps\SleamApp\app\src\main\AndroidManifest.xml:64:18-59
+71        <service
+71-->[androidx.room:room-runtime:2.2.5] C:\Users\Longhurst\.gradle\caches\transforms-2\files-2.1\eb7b959c56e83f42bc577bfe7fb619e1\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+72            android:name="androidx.room.MultiInstanceInvalidationService"
+72-->[androidx.room:room-runtime:2.2.5] C:\Users\Longhurst\.gradle\caches\transforms-2\files-2.1\eb7b959c56e83f42bc577bfe7fb619e1\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+73            android:directBootAware="true"
+73-->[androidx.room:room-runtime:2.2.5] C:\Users\Longhurst\.gradle\caches\transforms-2\files-2.1\eb7b959c56e83f42bc577bfe7fb619e1\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+74            android:exported="false" />
+74-->[androidx.room:room-runtime:2.2.5] C:\Users\Longhurst\.gradle\caches\transforms-2\files-2.1\eb7b959c56e83f42bc577bfe7fb619e1\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+75    </application>
+76
+77</manifest>

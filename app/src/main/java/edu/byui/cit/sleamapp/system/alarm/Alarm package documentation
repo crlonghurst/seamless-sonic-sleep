@@ -1,0 +1,2 @@
+The alarm package has the necessary classes to allow for alarms to be called and activated. AlarmReceiver will be received when an alarm is activated.
+NotificationHelper is the way to make a notification appear at the top of the screen.

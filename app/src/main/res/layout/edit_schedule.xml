@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Author: Ty Munro, remixed by Joel Jossie
+    Created: 19 November 2020
+    Last Updated: 4 December 2020
+    Edit Schedule
+        Toolbar that holds an "X" button that when pressed sends the user back to the Schedules page.
+            A check mark that accepts the schedule specifications from the page.
+        TextView that says "Schedule Name".
+        EditText that allows the user to type the specific schedule name for the alarm.
+        TextView that says "Days Active".
+        ChipGroup that allows the user to toggle what days of the week they want to apply to the alarm.
+        TextView that says "Fall Asleep".
+        TextView that says "Begin playing music".
+        Button when pressed allows the user to select a specific time for the music to begin playing.
+        Button that directs the user to the add_music page to add music to the alarm.
+        TextView that says "Play for".
+        Button when pressed allows the user to select the amount of time that the music will play for.
+        TextView that says "Stay asleep".
+        TextView that says "Play sounds".
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/edit_schedule_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/purple_500"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="@string/edit_schedule"
+        app:titleMarginStart="80dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/schedule_name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:autofillHints=""
+        android:ems="9"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_schedule_app_bar" />
+
+    <TextView
+        android:id="@+id/days_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/days_active"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/schedule_name_field" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/days_active_chip_group"
+        android:layout_width="391dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        app:chipSpacingHorizontal=".1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_active">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_sunday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:buttonTintMode="src_atop"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/S"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_monday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/M"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_tuesday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/T"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_wednesday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/W"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_thursday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/T"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_friday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/F"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_saturday"
+            style="@style/CustomChipChoice"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:checkable="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/S"
+            android:textAlignment="center"
+            app:checkedIconEnabled="false"
+            app:checkedIconVisible="false"
+            app:chipEndPadding="6dp"
+            app:chipIconEnabled="false"
+            app:chipIconVisible="false" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/fall_asleep_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/fall_asleep"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_active_chip_group" />
+
+    <TextView
+        android:id="@+id/fall_asleep_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/begin_playing_music"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fall_asleep_title" />
+
+    <Button
+        android:id="@+id/btn_fall_asleep_time"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="187dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="30sp"
+        app:icon="@drawable/ic_baseline_access_alarm_24"
+        app:iconTint="?android:attr/textColorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fall_asleep_subtext" />
+
+    <TextView
+        android:id="@+id/stay_asleep_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/stay_asleep"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fall_asleep_time" />
+
+    <TextView
+        android:id="@+id/wake_up_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/wake_up"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_stay_asleep_time" />
+
+    <TextView
+        android:id="@+id/stay_asleep_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/play_sounds"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_asleep_title" />
+
+    <TextView
+        android:id="@+id/wake_up_subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/wake_up_subtext"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wake_up_title" />
+
+    <Button
+        android:id="@+id/btn_stay_asleep_time"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="187dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="30sp"
+        app:icon="@drawable/ic_baseline_access_alarm_24"
+        app:iconTint="?android:attr/textColorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_asleep_subtext" />
+
+    <Button
+        android:id="@+id/btn_wake_up_time"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="187dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="30sp"
+        app:icon="@drawable/ic_baseline_access_alarm_24"
+        app:iconTint="?android:attr/textColorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wake_up_subtext" />
+
+    <Button
+        android:id="@+id/btn_fall_asleep_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/add_music_button"
+        app:icon="@drawable/ic_baseline_volume_up_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fall_asleep_subtext" />
+
+    <Button
+        android:id="@+id/btn_stay_asleep_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/add_music_button"
+        app:icon="@drawable/ic_baseline_volume_up_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stay_asleep_subtext" />
+
+    <Button
+        android:id="@+id/btn_wake_up_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/add_music_button"
+        app:icon="@drawable/ic_baseline_volume_up_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wake_up_subtext" />
+
+    <ImageButton
+        android:id="@+id/btn_confirm"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/purple_500"
+        android:clickable="true"
+        android:contentDescription="@string/settings"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_check_24" />
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        style="@android:style/Widget.DeviceDefault.Light.ImageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/purple_500"
+        android:clickable="true"
+        android:contentDescription="@string/overflow_menu"
+        android:focusable="true"
+        android:tint="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_close_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
